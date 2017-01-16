@@ -1,26 +1,27 @@
-package serie6;
+package serie6Genetik;
 
 
 
 public class Anwendung {
 
 	/**
-	 * @param args
+	 * Diese Serie hat viel mehr Spaß gemacht und das Thema war ca. 12498178522934523 mal geiler!
+	 * <3
 	 */
 	public static void main(String[] args) {
 		
-		// +Speichereinheit
+		
 		String[] sequenzen = Gendaten.getGendaten();
 		Gensequenz peter = new Gensequenz(sequenzen);
-		String alpha = "ATTATAATTTGTATACCACCTTATAGATACCCATGTTCAGGAAAAGTTGA";
-		System.out.println(alpha);
-		System.out.println(peter.suche1(alpha));
-		System.out.println(peter.getGensequenz().length());
 		
-		System.out.println(peter.knuthSuche(alpha));
+	
+		// Proteinsequenzen
+		StringBuilder temp = peter.rnaSequenz();
+		System.out.println(peter.proteinSequenz(temp));
 		
-
-		
+		// Suche nach GAGAAG
+		System.out.println(peter.knuthSuche("GAGAAG"));
+		System.out.println(peter.suche1("GAGAAG"));
 	
 	}
 

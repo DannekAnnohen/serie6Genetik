@@ -1,4 +1,4 @@
-package serie6;
+package serie6Genetik;
 
 import java.util.HashMap;
 
